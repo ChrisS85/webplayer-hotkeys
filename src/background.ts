@@ -11,6 +11,16 @@ const players: Player[] = [
     tabQuery: '*://*.spotify.com/*',
     title: 'spotify',
     url: 'https://open.spotify.com/',
+  }, {
+    controlQueries: {
+      next: '.button-nfplayerNextEpisode',
+      play: '.button-nfplayerPlay,.button-nfplayerPause',
+      prev: '.button-nfplayerBackTen'
+    },
+    default: true,
+    tabQuery: '*://*.netflix.com/*',
+    title: 'netflix',
+    url: 'https://netflix.com/watch'
   },
   {
     controlQueries: {

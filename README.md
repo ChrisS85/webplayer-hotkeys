@@ -28,11 +28,12 @@ This extension allows you to configure shortcuts to `play`, `pause` and go to th
 
 To configure the shortcuts, go to `chrome://extensions/shortcuts` (you have to copy and paste it on the address bar), find the `Webplayer Hotkeys` extension and assign the shortcuts to the commands you want
 
-If there is more player tabs than one, it follows this order of priority: `Spotify > Deezer > SoundCloud > Youtube Music > Youtube`
+If there is more player tabs than one, it follows this order of priority: `Spotify > Netflix > Deezer > SoundCloud > Youtube Music > Youtube`
 
 Works with:
 
 - Spotify
+- Netflix
 - Deezer
 - SoundCloud
 - Youtube
