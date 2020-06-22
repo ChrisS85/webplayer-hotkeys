@@ -76,6 +76,17 @@ const checkOpenedPlayers = (): Promise<PlayerTab[]> =>
     try {
       const openedPlayers: PlayerTab[] = []
       let checkedPlayers = 0
+      players.forEach(player => {
+        chrome.tabs.query({
+          url: player.tabQuery,
+          highlighted: true
+        }, (tabs) => {
+          if (tabs.length && tabs[0].id) {
+            openedPlayers.push({ player, tab: tabs[0] })
+            resolve(openedPlayers)
+          }
+        })
+      })
       players.forEach((player) => {
         chrome.tabs.query({ url: player.tabQuery }, (tabs) => {
           checkedPlayers++
